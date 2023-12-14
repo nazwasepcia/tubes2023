@@ -1,6 +1,15 @@
 <?php
 session_start();
 require_once 'includes/db_connect.php';
+
+// Ambil data produk dari database
+try {
+  $query = "SELECT nama, harga, foto FROM produk";
+  $stmt = $pdo->query($query);
+  $produk = $stmt->fetchAll();
+} catch (PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
 ?>
 
 <!DOCTYPE html>
@@ -121,115 +130,26 @@ require_once 'includes/db_connect.php';
     <!-- croissant section  -->
 <div class="container-fluid mb-5">
     <div class="row">
+      <?php foreach ($produk as $item): ?>
         <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
+          <div class="box py-3">
+              <div class="img-box">
+                <img src="assets/images/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+              </div>
+              <div class="detail-box">
+                <h6>
+                    <?php echo htmlspecialchars($item['nama']); ?>
+                </h6>
+                <h5>
+                    $<?php echo htmlspecialchars($item['harga']); ?>
+                </h5>
+                <a href="">
+                    BUY NOW
+                </a>
+              </div>
             </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-            <div class="box py-3">
-                <div class="img-box">
-                    <img src="assets/images/chocolate1.png" alt="">
-                </div>
-                <div class="detail-box">
-                    <h6>
-                        Yummy <span>chocolate</span>
-                    </h6>
-                    <h5>
-                        $5.0
-                    </h5>
-                    <a href="">
-                        BUY NOW
-                    </a>
-                </div>
-            </div>
-        </div>
-      </div>
+          </div>
+      <?php endforeach; ?>
     </div>
     <!-- end croissant section -->
 
