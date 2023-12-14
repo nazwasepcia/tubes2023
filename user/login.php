@@ -38,6 +38,29 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
     <title>Login</title>
 </head>
 <body>
-    
+<div>
+        <h2>Login</h2>
+        <p>Silakan masuk ke akun Anda.</p>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <div>
+                <label>Username</label>
+                <input type="text" name="username" required>
+            </div>    
+            <div>
+                <label>Password</label>
+                <input type="password" name="password" required>
+            </div>
+            <div>
+                <input type="submit" value="Login">
+            </div>
+            <p>Belum punya akun? <a href="register.php">Daftar sekarang</a>.</p>
+        </form>
+    </div>
+
+    <?php 
+    if (!empty($error)) {
+        echo '<div>' . $error . '</div>';
+    }
+    ?>\
 </body>
 </html>
