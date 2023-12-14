@@ -134,7 +134,7 @@ try {
         <div class="col-lg-4 col-md-6 d-flex justify-content-center">
           <div class="box py-3">
               <div class="img-box">
-                <img src="assets/images/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+                <img src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
               </div>
               <div class="detail-box">
                 <h6>
