@@ -6,7 +6,7 @@ include '../includes/functions.php';
 
 $error = '';
 
-if ($server["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username =($_POST['username']);
     $password = ($_POST['password']);
 
@@ -62,6 +62,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
         echo '<div>' . $error . '</div>';
     }
     ?>
-    
+
 </body>
 </html>
