@@ -61,6 +61,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
     if (!empty($error)) {
         echo '<div>' . $error . '</div>';
     }
-    ?>\
+    ?>
+    
 </body>
 </html>
