@@ -25,7 +25,7 @@ try {
 </div>
     <!-- about section -->
 
-    <section class="about_section layout_padding ">
+    <section id="about" class="about_section layout_padding ">
       <div class="container  ">
         <div class="row">
           <div class="col-md-6">
@@ -57,7 +57,7 @@ try {
     <!-- end about section -->
     
     <!-- croissant section  -->
-<div class="container-fluid mb-5">
+<div id="produk" class="container-fluid mb-5">
     <div class="row">
       <?php foreach ($produk as $item): ?>
         <div class="col-lg-4 col-md-6 d-flex justify-content-center">

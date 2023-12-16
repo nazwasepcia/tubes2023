@@ -56,16 +56,16 @@
         <div class="collapse navbar-collapse " id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="public/index.php">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link" href="/tubes_new/index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="public/about.php"> About</a>
+              <a class="nav-link" href="<?php echo $publicLoc ?>/about.php"> About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="public/products.php">Produk</a>
+              <a class="nav-link" href="<?php echo $publicLoc ?>/products.php">Produk</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="p ublic/contact.php">Contact Us</a>
+              <a class="nav-link" href="<?php echo $publicLoc ?>/contact.php">Contact Us</a>
             </li>
           </ul>
         

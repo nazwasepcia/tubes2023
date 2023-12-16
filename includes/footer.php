@@ -1,5 +1,5 @@
     <!-- info section -->
-    <section class="info_section layout_padding2">
+    <section id="contact" class="info_section layout_padding2">
       <div class="container">
         <div class="row info_form_social_row">
           <div class="col-md-8 col-lg-9">

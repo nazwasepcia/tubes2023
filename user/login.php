@@ -48,7 +48,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
 
 <div class="container m-5">
     <?php if (!empty($registerSuccessMsg)): ?>
-        <p><?php echo $registerSuccessMsg; ?></p>
+        <div class="alert alert-success"><?php echo $registerSuccessMsg; ?></div>
         <hr>
     <?php endif; ?>
 
