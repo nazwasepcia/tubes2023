@@ -9,7 +9,12 @@ try {
 } catch (PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
+
+$isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
+
 ?>
+
+
 
 
 <?php
@@ -58,28 +63,36 @@ try {
     <!-- end about section -->
     
     <!-- croissant section  -->
-<div id="produk" class="container-fluid mb-5">
-    <div class="row">
-      <?php foreach ($produk as $item): ?>
-        <div class="col-lg-4 col-md-6 d-flex justify-content-center">
-          <div class="box py-3">
-              <div class="img-box">
-                <img src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+    <div id="produk" class="container-fluid mb-5">
+        <div class="row">
+          <?php foreach ($produk as $item): ?>
+            <div class="col-lg-4 col-md-6 d-flex justify-content-center">
+              <div class="box py-3">
+                  <div class="img-box">
+                    <img src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h6>
+                        <?php echo htmlspecialchars($item['nama']); ?>
+                    </h6>
+                    <h5>
+                        $<?php echo htmlspecialchars($item['harga']); ?>
+                    </h5>
+                    <a href="">
+                        BUY NOW
+                    </a>
+                  </div>
+                </div>
               </div>
-              <div class="detail-box">
-                <h6>
-                    <?php echo htmlspecialchars($item['nama']); ?>
-                </h6>
-                <h5>
-                    $<?php echo htmlspecialchars($item['harga']); ?>
-                </h5>
-                <a href="">
-                    BUY NOW
-                </a>
-              </div>
+          <?php endforeach; ?>
+        </div>
+        <?php if ($isUserAdmin): ?>
+          <div class="row">
+            <div class="col d-flex justify-content-center">
+              <a href="user/add_product.php" class="btn btn-primary">Tambahkan Produk</a>
             </div>
           </div>
-      <?php endforeach; ?>
+        <?php endif; ?>
     </div>
     <!-- end croissant section -->
 
