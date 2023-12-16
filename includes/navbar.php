@@ -71,9 +71,8 @@
         
           <?php if ($isUserLoggedIn): ?>
             <div class="quote_btn-container">
-                  
                   <a href="user/logout.php">
-                  <i class="fa fa-user" aria-hidden="true"></i> <?php echo htmlspecialchars($_SESSION['username']); ?> | Logout
+                    <i class="fa fa-user" aria-hidden="true"></i> <?php echo htmlspecialchars($_SESSION['username']); ?> | Logout
                   </a>
             </div>
           <?php else: ?>
@@ -81,6 +80,9 @@
                   <span><i class="fa fa-user" aria-hidden="true"></i></span>
                   <a href="user/login.php">
                       <span>Login</span>
+                  </a>
+                  <a href="user/register.php">
+                      <span>Register</span>
                   </a>
             </div>
           <?php endif; ?>
