@@ -2,6 +2,8 @@
 session_start();
 require_once 'includes/db_connect.php';
 
+$isUserLoggedIn = isset($_SESSION['username']);
+
 // Ambil data produk dari database
 try {
   $query = "SELECT nama, harga, foto FROM produk";
@@ -77,6 +79,7 @@ try {
               <a class="nav-link" href="public/contact.php">Contact Us</a>
             </li>
           </ul>
+<<<<<<< HEAD
           <div class="quote_btn-container">
            
                     <span><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -84,6 +87,23 @@ try {
                         <span></span> Login
                     </a>
           </div>
+=======
+          <?php if ($isUserLoggedIn): ?>
+            <div class="quote_btn-container">
+                  <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <a href="user/logout.php">
+                      <span></span> Logout
+                  </a>
+            </div>
+          <?php else: ?>
+            <div class="quote_btn-container">
+                  <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                  <a href="user/login.php">
+                      <span></span> Login
+                  </a>
+            </div>
+          <?php endif; ?>
+>>>>>>> fc462d3f9f235893094bba8b47d8b9e0ecd2eb46
         </div>
       </nav>
     </div>
