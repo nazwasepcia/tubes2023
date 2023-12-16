@@ -76,18 +76,10 @@ try {
               <a class="nav-link" href="public/products.php">Produk</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="public/contact.php">Contact Us</a>
+              <a class="nav-link" href="p ublic/contact.php">Contact Us</a>
             </li>
           </ul>
-<<<<<<< HEAD
-          <div class="quote_btn-container">
-           
-                    <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                    <a href="user/login.php">
-                        <span></span> Login
-                    </a>
-          </div>
-=======
+        
           <?php if ($isUserLoggedIn): ?>
             <div class="quote_btn-container">
                   <span><i class="fa fa-user" aria-hidden="true"></i></span>
@@ -103,7 +95,6 @@ try {
                   </a>
             </div>
           <?php endif; ?>
->>>>>>> fc462d3f9f235893094bba8b47d8b9e0ecd2eb46
         </div>
       </nav>
     </div>
