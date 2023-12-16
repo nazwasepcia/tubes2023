@@ -23,7 +23,7 @@ function getProducts($pdo){
 function registerUser($pdo, $username, $password, $confirm_password, $redirectURL) {
     if ($password == $confirm_password) {
         // Persiapan query untuk memasukkan data ke database
-        $query = "INSERT INTO user (username, password, level) VALUES (?, ?, 'pelanggan')";
+        $query = "INSERT INTO users (username, password, level) VALUES (?, ?, 'pelanggan')";
         $stmt = $pdo->prepare($query);
 
         // Eksekusi query
