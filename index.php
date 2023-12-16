@@ -81,7 +81,7 @@ try {
            
                     <span><i class="fa fa-user" aria-hidden="true"></i></span>
                     <a href="user/login.php">
-                        <span></span> login
+                        <span></span> Login
                     </a>
           </div>
         </div>
@@ -118,7 +118,7 @@ try {
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img src="assets/images/about-img.png" alt="">
+              <img src="assets/images/about.png" alt="">
             </div>
           </div>
         </div>
