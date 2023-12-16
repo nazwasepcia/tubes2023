@@ -1,9 +1,6 @@
 <?php
 session_start();
 require_once 'includes/db_connect.php';
-
-$isUserLoggedIn = isset($_SESSION['username']);
-
 // Ambil data produk dari database
 try {
   $query = "SELECT nama, harga, foto FROM produk";
@@ -17,6 +14,8 @@ try {
 
 <?php
   $pageTitle = "Homepage";
+  $isUserLoggedIn = isset($_SESSION['username']);
+  $assetLoc = "assets";
   include 'includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
@@ -83,16 +82,6 @@ try {
     <!-- end croissant section -->
 
 <?php
+  $assetLoc = "assets";
   include 'includes/footer.php'; // Ganti 'includes' dengan path yang benar
 ?>
-
- <!-- jQery -->
- <script  src="assets/js/jquery-3.4.1.min.js"></script>
-  <!-- bootstrap js -->
-  <script  src="assets/js/bootstrap.js"></script>
-  <!-- slick slider -->
-  <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
-  <!-- custom js -->
-  <script  src="assets/js/custom.js"></script>
-</body>
-</html>

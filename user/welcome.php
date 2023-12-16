@@ -10,19 +10,10 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 ?>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="2;url=/tubes_new/index.php" />
-    <title>Welcome</title>
-    <!-- Sertakan file CSS -->
-    <link rel="stylesheet" type="text/css" href="path/to/your/css">
-</head>
-<body>
-
 <?php
+  $assetLoc = "../assets";
   $pageTitle = "Welcome";
+  $isUserLoggedIn = isset($_SESSION['username']);
   $additionalHead = '<meta http-equiv="refresh" content="2;url=/tubes_new/index.php" />';
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
@@ -34,7 +25,6 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     </div>
 
 <?php
+  $assetLoc = "../assets";
   include '../includes/footer.php'; // Ganti 'includes' dengan path yang benar
 ?>
-</body>
-</html>

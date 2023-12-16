@@ -20,7 +20,7 @@
 
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="<?php echo $assetLoc; ?>/css/bootstrap.css" />
   <!--slick slider stylesheet -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick-theme.min.css" />
@@ -29,13 +29,13 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet" />
   <!-- slick slider -->
 
-  <link rel="stylesheet" href="../assets/css/slick-theme.css" />
+  <link rel="stylesheet" href="<?php echo $assetLoc; ?>/css/slick-theme.css" />
   <!-- font awesome style -->
-  <link href="../assets/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="<?php echo $assetLoc; ?>/css/font-awesome.min.css" rel="stylesheet" />
   <!-- Custom styles for this template -->
-  <link href="../assets/css/style.css" rel="stylesheet" />
+  <link href="<?php echo $assetLoc; ?>/css/style.css" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="../assets/css/responsive.css" rel="stylesheet" />
+  <link href="<?php echo $assetLoc; ?>/css/responsive.css" rel="stylesheet" />
 </head>
 <body>
 <div class="main_body_content">

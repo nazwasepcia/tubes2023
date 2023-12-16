@@ -30,17 +30,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-
 <?php
+  $assetLoc = "../assets";
   $pageTitle = "Login";
+  $isUserLoggedIn = isset($_SESSION['username']);
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
@@ -70,8 +63,6 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
     ?>
 
 <?php
+  $assetLoc = "../assets";
   include '../includes/footer.php'; // Ganti 'includes' dengan path yang benar
 ?>
-
-</body>
-</html>

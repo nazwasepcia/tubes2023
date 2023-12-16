@@ -59,7 +59,7 @@
               </h4>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="../assets/images/insta-img.png" alt="">
+                  <img src="<?php echo $assetLoc; ?>/images/insta-img.png" alt="">
                 </div>
                 <p>
                   long established fact that a reader
@@ -67,7 +67,7 @@
               </div>
               <div class="insta_box">
                 <div class="img-box">
-                  <img src="../assets/images/insta-img.png" alt="">
+                  <img src="<?php echo $assetLoc; ?>/images/insta-img.png" alt="">
                 </div>
                 <p>
                   long established fact that a reader
@@ -129,12 +129,12 @@
   <!-- footer section -->
 
    <!-- jQery -->
- <script  src="../assets/js/jquery-3.4.1.min.js"></script>
+ <script  src="<?php echo $assetLoc; ?>/js/jquery-3.4.1.min.js"></script>
   <!-- bootstrap js -->
-  <script  src="../assets/js/bootstrap.js"></script>
+  <script  src="<?php echo $assetLoc; ?>/js/bootstrap.js"></script>
   <!-- slick slider -->
   <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.js"></script>
   <!-- custom js -->
-  <script  src="../assets/js/custom.js"></script>
+  <script  src="<?php echo $assetLoc; ?>/js/custom.js"></script>
 </body>
 </html>
