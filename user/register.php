@@ -15,8 +15,21 @@ if (isset($_POST['register'])) {
     $confirm_password = $_POST['confirm_password'];
     $redirectURL = "login.php";
 
-    registerUser($pdo, $username, $password, $confirm_password);
+    registerUser($pdo, $username, $password, $confirm_password, $redirectURL);
 }
+
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
+    header("location: ../index.php");
+    exit;
+}
+
+?>
+
+<?php
+  $assetLoc = "../assets";
+  $pageTitle = "Register";
+  $isUserLoggedIn = isset($_SESSION['username']);
+  include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
 <div class="container m-5">
@@ -37,4 +50,9 @@ if (isset($_POST['register'])) {
         <button type="submit" name="register">Register</button>
     </form>
 </div>
+
+<?php
+  $assetLoc = "../assets";
+  include '../includes/footer.php'; // Ganti 'includes' dengan path yang benar
+?>
     
