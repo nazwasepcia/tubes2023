@@ -16,6 +16,7 @@ try {
   $pageTitle = "Homepage";
   $isUserLoggedIn = isset($_SESSION['username']);
   $assetLoc = "assets";
+  $userLoc = "user";
   include 'includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 

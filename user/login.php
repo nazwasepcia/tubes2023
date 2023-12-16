@@ -32,6 +32,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
 
 <?php
   $assetLoc = "../assets";
+  $userLoc = ".";
   $pageTitle = "Login";
   $isUserLoggedIn = isset($_SESSION['username']);
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar

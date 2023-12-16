@@ -12,6 +12,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <?php
   $assetLoc = "../assets";
+  $userLoc = ".";
   $pageTitle = "Welcome";
   $isUserLoggedIn = isset($_SESSION['username']);
   $additionalHead = '<meta http-equiv="refresh" content="2;url=/tubes_new/index.php" />';

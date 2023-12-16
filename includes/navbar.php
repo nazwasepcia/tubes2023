@@ -78,7 +78,7 @@
           <?php else: ?>
             <div class="quote_btn-container">
                   <span><i class="fa fa-user" aria-hidden="true"></i></span>
-                  <a href="user/login.php">
+                  <a href="<?php echo $userLoc ?>/login.php">
                       <span>Login</span>
                   </a>
                   <a href="user/register.php">

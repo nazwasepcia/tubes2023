@@ -27,13 +27,14 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
 
 <?php
   $assetLoc = "../assets";
+  $userLoc = ".";
   $pageTitle = "Register";
   $isUserLoggedIn = isset($_SESSION['username']);
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
 <div class="container m-5">
-    <h2 class="text-center">Register</h2>
+    <h2>Register</h2>
     <form action="register.php" method="post">
         <div>
             <label for="username">Username:</label>
