@@ -38,6 +38,12 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
     <title>Login</title>
 </head>
 <body>
+
+<?php
+  $pageTitle = "Login";
+  include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
+?>
+
 <div>
         <h2>Login</h2>
         <p>Silakan masuk ke akun Anda.</p>
@@ -62,6 +68,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
         echo '<div>' . $error . '</div>';
     }
     ?>
+
+<?php
+  include '../includes/footer.php'; // Ganti 'includes' dengan path yang benar
+?>
 
 </body>
 </html>

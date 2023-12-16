@@ -21,6 +21,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 </head>
 <body>
 
+<?php
+  $pageTitle = "Welcome";
+  $additionalHead = '<meta http-equiv="refresh" content="2;url=/tubes_new/index.php" />';
+  include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
+?>
     <div>
         <h1>Selamat Datang, <?php echo htmlspecialchars($_SESSION['username']); ?>!</h1>
         <p>Ini adalah halaman sambutan setelah Anda berhasil login.</p>
@@ -28,5 +33,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <p><a href="logout.php">Logout</a></p>
     </div>
 
+<?php
+  include '../includes/footer.php'; // Ganti 'includes' dengan path yang benar
+?>
 </body>
 </html>
