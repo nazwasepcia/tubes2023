@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
-    header("location: welcome.php");
+    header("location: ../index.php");
     exit;
 }
 
