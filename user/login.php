@@ -37,24 +37,24 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
-<div>
-        <h2>Login</h2>
-        <p>Silakan masuk ke akun Anda.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div>
-                <label>Username</label>
-                <input type="text" name="username" required>
-            </div>    
-            <div>
-                <label>Password</label>
-                <input type="password" name="password" required>
-            </div>
-            <div>
-                <input type="submit" value="Login">
-            </div>
-            <p>Belum punya akun? <a href="register.php">Daftar sekarang</a>.</p>
-        </form>
-    </div>
+<div class="container">
+    <h2>Login</h2>
+    <p>Silakan masuk ke akun Anda.</p>
+    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <div>
+            <label>Username</label>
+            <input type="text" name="username" required>
+        </div>    
+        <div>
+            <label>Password</label>
+            <input type="password" name="password" required>
+        </div>
+        <div>
+            <input type="submit" value="Login">
+        </div>
+        <p>Belum punya akun? <a href="register.php">Daftar sekarang</a>.</p>
+    </form>
+</div>
 
     <?php 
     if (!empty($error)) {
