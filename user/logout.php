@@ -9,6 +9,6 @@ $_SESSION = array();
 session_destroy();
 
 // Mengarahkan ke halaman login (atau halaman lain yang Anda inginkan)
-header("Location: login.php");
+header("Location: /tubes_new/index.php");
 exit;
 ?>

@@ -82,9 +82,9 @@ try {
         
           <?php if ($isUserLoggedIn): ?>
             <div class="quote_btn-container">
-                  <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                  
                   <a href="user/logout.php">
-                      <span><?php echo htmlspecialchars($_SESSION['username']); ?> | Logout</span>
+                  <i class="fa fa-user" aria-hidden="true"></i> <?php echo htmlspecialchars($_SESSION['username']); ?> | Logout
                   </a>
             </div>
           <?php else: ?>
