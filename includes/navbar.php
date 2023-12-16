@@ -62,7 +62,7 @@
               <a class="nav-link" href="<?php echo $publicLoc ?>/about.php"> About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="<?php echo $publicLoc ?>/products.php">Produk</a>
+              <a class="nav-link" href="<?php echo $publicLoc ?>/produk.php">Produk</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="<?php echo $publicLoc ?>/contact.php">Contact Us</a>
