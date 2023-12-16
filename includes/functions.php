@@ -28,15 +28,16 @@ function registerUser($pdo, $username, $password, $confirm_password, $redirectUR
 
         // Eksekusi query
         if ($stmt->execute([$username, $password])) {
+            $_SESSION['register_success'] = "Registrasi berhasil, silakan login.";
             echo "User berhasil didaftarkan!";
             // Redirect ke halaman login atau lainnya
             header("Location: $redirectURL");
             exit();
         } else {
-            echo "Terjadi kesalahan saat mendaftar.";
+            $_SESSION["register_failed"] = "Terjadi kesalahan saat mendaftar.";
         }
     } else {
-        echo "Konfirmasi password tidak cocok.";
+        $_SESSION["register_failed"] = "Konfirmasi password tidak cocok.";
     }
 }
 

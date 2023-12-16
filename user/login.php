@@ -23,6 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+if (isset($_SESSION['register_success'])) {
+    $registerSuccessMsg = $_SESSION['register_success'];
+    unset($_SESSION['register_success']); // Hapus sesi setelah ditampilkan
+} else {
+    $registerSuccessMsg = '';
+}
+
+
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
     header("location: ../index.php");
     exit;
@@ -39,6 +47,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
 ?>
 
 <div class="container m-5">
+    <?php if (!empty($registerSuccessMsg)): ?>
+        <p><?php echo $registerSuccessMsg; ?></p>
+        <hr>
+    <?php endif; ?>
+
     <h2>Login</h2>
     <p>Silakan masuk ke akun Anda.</p>
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

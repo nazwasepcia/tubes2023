@@ -49,7 +49,16 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true ) {
             <input type="password" id="confirm_password" name="confirm_password" required>
         </div>
         <button type="submit" name="register">Register</button>
+
     </form>
+    <?php if (isset($_SESSION["register_failed"])): ?>
+        <div class="alert alert-warning mt-2">
+            <?php 
+            echo $_SESSION["register_failed"]; 
+            unset($_SESSION["register_failed"]); // Hapus sesi setelah ditampilkan
+            ?>
+        </div>
+    <?php endif; ?>
 </div>
 
 <?php
