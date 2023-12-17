@@ -69,7 +69,7 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
               <div class="box py-3">
                   <div class="img-box">
-                    <img class="product_image" src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+                    <img class="product-image" src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
                   </div>
                   <div class="detail-box">
                     <h6>
