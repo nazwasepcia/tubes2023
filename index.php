@@ -75,7 +75,7 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
                           echo '<img src="'.$imagePath.'" alt="Produk" class="product-image">';
                       } else {
                           // Jika gambar tidak ada, gunakan placeholder
-                          echo '<img src="assets/images/product/produk_placeholder.webp" alt="Produk">';
+                          echo '<img src="assets/images/product/produk_placeholder.webp" alt="Produk" class="product-image">';
                       }
                     ?>
                   </div>
