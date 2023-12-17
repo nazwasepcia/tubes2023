@@ -53,7 +53,7 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
           </div>
           <div class="col-md-6">
             <div class="img-box">
-              <img class="about-image" src="assets/images/about.png" alt="">
+              <img class="about-image" src="assets/images/about.webp" alt="">
             </div>
           </div>
         </div>
