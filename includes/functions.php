@@ -41,4 +41,29 @@ function registerUser($pdo, $username, $password, $confirm_password, $redirectUR
     }
 }
 
+function handleAddProduct($pdo, $postData) {
+    // Validasi input (Ini adalah contoh sederhana. Tambahkan validasi sesuai kebutuhan)
+    if (empty($postData['nama']) || empty($postData['harga']) || empty($postData['kategori_id'])) {
+        return "Semua field harus diisi.";
+    }
+
+    // Menyimpan data ke database
+    try {
+        $query = "INSERT INTO produk (kategori_id, nama, harga, foto, detail, ketersediaan_stok) VALUES (?, ?, ?, ?, ?, ?)";
+        $stmt = $pdo->prepare($query);
+        $stmt->execute([
+            $postData['kategori_id'],
+            $postData['nama'],
+            $postData['harga'],
+            $postData['foto'],
+            $postData['detail'],
+            $postData['ketersediaan_stok']
+        ]);
+    } catch (PDOException $e) {
+        return "Gagal menyimpan produk: " . $e->getMessage();
+    }
+
+    return "Produk berhasil ditambahkan.";
+}
+
 ?>

@@ -9,6 +9,13 @@ if (!isset($_SESSION['level']) || $_SESSION['level'] != 'admin') {
 
 // Sambungan ke database
 require '../includes/db_connect.php';
+require '../includes/functions.php';
+
+// Handle POST request
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $result = handleAddProduct($pdo, $_POST);
+    // $result akan menyimpan pesan kesalahan atau konfirmasi sukses
+}
 
 // Query untuk mengambil data kategori
 $query = "SELECT id, nama FROM kategori"; // Ganti 'nama' dengan nama field yang sesuai di tabel kategori
@@ -28,8 +35,15 @@ $kategoriList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <div class="container m-5">
+    <!-- Tampilkan pesan hasil penanganan -->
+    <?php if (isset($result)): ?>
+        <div class="alert alert-info">
+            <?php echo $result; ?>
+        </div>
+    <?php endif; ?>
+
     <h2>Tambah Produk</h2>
-    <form action="path_to/submit_add_product.php" method="post" enctype="multipart/form-data">
+    <form action="add_product.php" method="post" enctype="multipart/form-data">
         <<div class="form-group">
             <label for="kategori_id">Kategori:</label>
             <select class="form-control" id="kategori_id" name="kategori_id">
@@ -50,7 +64,7 @@ $kategoriList = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
         <div class="form-group">
             <label for="foto">Foto Produk:</label>
-            <input type="file" class="form-control" id="foto" name="foto">
+            <input type="text" class="form-control" id="foto" name="foto">
         </div>
         <div class="form-group">
             <label for="detail">Detail Produk:</label>
