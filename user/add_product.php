@@ -8,7 +8,7 @@ if (!isset($_SESSION['level']) || $_SESSION['level'] != 'admin') {
 }
 
 // Sambungan ke database
-require 'path_to/db_connect.php';
+require '../includes/db_connect.php';
 
 // Query untuk mengambil data kategori
 $query = "SELECT id, nama FROM kategori"; // Ganti 'nama' dengan nama field yang sesuai di tabel kategori
