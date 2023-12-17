@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-// Pseudocode - Anda perlu mengganti ini dengan kode sesuai sistem Anda
-if (!isset($_SESSION['user_level']) || $_SESSION['user_level'] != 'admin') {
+if (!isset($_SESSION['level']) || $_SESSION['level'] != 'admin') {
     // Redirect ke halaman login atau halaman lain
     header('Location: login.php');
     exit();
