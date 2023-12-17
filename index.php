@@ -11,7 +11,7 @@ try {
 }
 
 $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
-echo $_SESSION['level']
+
 ?>
 
 

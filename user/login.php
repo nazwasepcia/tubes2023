@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($user) {
         $_SESSION['loggedin']= true ;
         $_SESSION['username']= $username ;
-        $_SESSION['user_id']= $user['id'] ;
+        $_SESSION['user_id']= $user['id'];
+        $_SESSION['level']=$user['level'];
 
         header("location: welcome.php");
         exit;
