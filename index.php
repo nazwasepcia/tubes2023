@@ -80,13 +80,13 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
                     ?>
                   </div>
                   <div class="detail-box">
-                    <h6>
+                    <h6 class="text-center">
                         <?php echo htmlspecialchars($item['nama']); ?>
                     </h6>
-                    <h5>
+                    <h5 class="text-center">
                         $<?php echo htmlspecialchars($item['harga']); ?>
                     </h5>
-                    <a href="">
+                    <a href="" class="text-center">
                         BUY NOW
                     </a>
                   </div>
