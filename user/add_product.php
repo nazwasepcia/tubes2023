@@ -28,7 +28,7 @@ $kategoriList = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <?php
   $assetLoc = "../assets";
   $userLoc = ".";
-  $publicLoc = ".";
+  $publicLoc = "../public";
   $pageTitle = "Tambah Produk";
   $isUserLoggedIn = isset($_SESSION['username']);
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
