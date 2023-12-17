@@ -71,7 +71,7 @@
         
           <?php if ($isUserLoggedIn): ?>
             <div class="quote_btn-container">
-                  <a href="user/logout.php">
+                  <a href="<?php echo $userLoc ?>/logout.php">
                     <i class="fa fa-user" aria-hidden="true"></i> <?php echo htmlspecialchars($_SESSION['username']); ?> | Logout
                   </a>
             </div>
@@ -81,7 +81,7 @@
                   <a href="<?php echo $userLoc ?>/login.php">
                       <span>Login</span>
                   </a>
-                  <a href="user/register.php">
+                  <a href="<?php echo $userLoc ?>/register.php">
                       <span>Register</span>
                   </a>
             </div>
