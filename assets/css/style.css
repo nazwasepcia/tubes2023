@@ -1056,3 +1056,9 @@ a:focus {
   height: 200px;   /* Atur tinggi gambar */
   object-fit: cover; /* Pastikan gambar menutupi area tanpa kehilangan rasio aspek */
 }
+
+.about-image {
+  width: auto;
+  height: 200px;
+  object-fit: contain;
+}
