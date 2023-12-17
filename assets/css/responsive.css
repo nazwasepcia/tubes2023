@@ -1,6 +1,6 @@
 @media (max-width: 1360px) {
   .main_body_content {
-    margin: 35px 35px 0 35px;
+    margin: 0 0 0 0;
   }
 
   .slider_section .detail_box {
@@ -10,7 +10,7 @@
 
 @media (max-width: 1120px) {
   .main_body_content {
-    margin: 25px 25px 0 25px;
+    margin: 0 0 0 0;
   }
 
   .client_section .client_container .box {
