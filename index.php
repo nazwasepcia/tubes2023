@@ -69,7 +69,15 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
             <div class="col-lg-4 col-md-6 d-flex justify-content-center">
               <div class="box py-3">
                   <div class="img-box">
-                    <img class="product-image" src="assets/images/product/<?php echo htmlspecialchars($item['foto']); ?>" alt="">
+                    <?php 
+                      $imagePath = "assets/images/product/" . htmlspecialchars($item['foto']);
+                      if (file_exists($imagePath) && !is_dir($imagePath)) {
+                          echo '<img src="'.$imagePath.'" alt="Produk" class="product-image">';
+                      } else {
+                          // Jika gambar tidak ada, gunakan placeholder
+                          echo '<img src="assets/images/product/produk_placeholder.webp" alt="Produk">';
+                      }
+                    ?>
                   </div>
                   <div class="detail-box">
                     <h6>
