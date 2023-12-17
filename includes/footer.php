@@ -16,30 +16,6 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-            <div class="info_links">
-              <h4>
-                Menu
-              </h4>
-              <div class="info_links_menu">
-                <a href="index.html">
-                  Home
-                </a>
-                <a href="about.html">
-                  About
-                </a>
-                <a href="chocolate.html">
-                  Chocolates
-                </a>
-                <a href="testimonial.html">
-                  Testimonial
-                </a>
-                <a href="contact.html">
-                  Contact us
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3">
             <div class="info_insta">
               <h4>
                 Instagram

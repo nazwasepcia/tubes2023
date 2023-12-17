@@ -86,7 +86,7 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
                     <h5 class="text-center">
                         $<?php echo htmlspecialchars($item['harga']); ?>
                     </h5>
-                    <a href="">
+                    <a href="https://wa.me/6289510380345?text=<?php echo urlencode("Saya tertarik dengan produk " . $item['nama']); ?>" target="_blank">
                         <p class="text-center">BUY NOW</p>
                     </a>
                   </div>
