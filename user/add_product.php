@@ -27,7 +27,7 @@ $kategoriList = $stmt->fetchAll(PDO::FETCH_ASSOC);
   include '../includes/navbar.php'; // Ganti 'includes' dengan path yang benar
 ?>
 
-<div class="container">
+<div class="container m-5">
     <h2>Tambah Produk</h2>
     <form action="path_to/submit_add_product.php" method="post" enctype="multipart/form-data">
         <<div class="form-group">

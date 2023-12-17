@@ -1050,3 +1050,9 @@ a:focus {
  color:brown;
  
 }
+
+.product-image {
+  width: 100%;     /* Atur lebar gambar menjadi 100% dari kontainer */
+  height: 200px;   /* Atur tinggi gambar */
+  object-fit: cover; /* Pastikan gambar menutupi area tanpa kehilangan rasio aspek */
+}
