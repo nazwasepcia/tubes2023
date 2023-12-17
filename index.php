@@ -86,8 +86,8 @@ $isUserAdmin = isset($_SESSION['level']) && $_SESSION['level'] == 'admin';
                     <h5 class="text-center">
                         $<?php echo htmlspecialchars($item['harga']); ?>
                     </h5>
-                    <a href="" class="text-center">
-                        BUY NOW
+                    <a href="">
+                        <p class="text-center">BUY NOW</p>
                     </a>
                   </div>
                 </div>
